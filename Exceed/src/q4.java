@@ -8,6 +8,9 @@ import com.gargoylesoftware.htmlunit.html.HtmlDivision;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSpan;
 
+// A maior parte das dependências são da API do HtmlUnit
+// Segue link para lista de dependências: http://htmlunit.sourceforge.net/dependencies.html
+
 public class q4 {
 
 	/**
@@ -20,8 +23,12 @@ public class q4 {
 	public static void main(String[] args)
 			throws FailingHttpStatusCodeException, MalformedURLException,
 			IOException {
+		/*
+		 * Basta rodar a aplicação como Java Application, e o nome e valor do
+		 * produto mais vendido será mostrado no console
+		 */
 
-		WebClient webClient = new WebClient();
+		WebClient webClient = new WebClient(BrowserVersion.FIREFOX_2);
 		webClient.setJavaScriptEnabled(false);
 		webClient.setCssEnabled(false);
 		HtmlPage page = (HtmlPage) webClient
